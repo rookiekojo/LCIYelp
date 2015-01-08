@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @church.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @church.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @church.phone %>
+</p>
+
+<p>
+  <strong>Resident pastor:</strong>
+  <%= @church.resident_Pastor %>
+</p>
+
+<%= link_to 'Edit', edit_church_path(@church), class: "btn btn-link" %> |
+<%= link_to 'Back', churches_path, class: "btn btn-link" %>

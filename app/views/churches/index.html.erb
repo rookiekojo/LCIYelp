@@ -1,0 +1,31 @@
+<h1>Listing churches</h1>
+
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Resident Pastor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @churches.each do |church| %>
+      <tr>
+        <td><%= church.name %></td>
+        <td><%= church.address %></td>
+        <td><%= church.phone %></td>
+        <td><%= church.resident_Pastor %></td>
+        <td><%= link_to 'Show', church, class: "btn btn-link" %></td>
+        <td><%= link_to 'Edit', edit_church_path(church), class: "btn btn-link" %></td>
+        <td><%= link_to 'Destroy', church, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Church', new_church_path, class: "btn btn-link" %>
