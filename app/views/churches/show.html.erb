@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag @church.image_url %><br><br>
+<p>
+  <strong>Resident pastor:</strong>
+  <%= @church.resident_Pastor %>
+</p>
+
 <p>
   <strong>Name:</strong>
   <%= @church.name %>
@@ -15,10 +21,7 @@
   <%= @church.phone %>
 </p>
 
-<p>
-  <strong>Resident pastor:</strong>
-  <%= @church.resident_Pastor %>
-</p>
+
 
 <%= link_to 'Edit', edit_church_path(@church), class: "btn btn-link" %> |
 <%= link_to 'Back', churches_path, class: "btn btn-link" %>

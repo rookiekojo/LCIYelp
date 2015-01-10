@@ -15,3 +15,4 @@ gem 'spring',       group: :development
 gem 'rails_12factor',  group: :production
 gem 'pg', group: :production
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'carrierwave'
