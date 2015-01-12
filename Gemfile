@@ -18,3 +18,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'carrierwave'
 gem 'fog', '~> 1.3.1'
 gem 'figaro', '~> 1.0.0'
+gem 'mini_magick'
