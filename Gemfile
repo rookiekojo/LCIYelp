@@ -16,3 +16,5 @@ gem 'rails_12factor',  group: :production
 gem 'pg', group: :production
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'carrierwave'
+gem 'fog', '~> 1.3.1'
+gem 'figaro', '~> 1.0.0'
