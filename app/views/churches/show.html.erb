@@ -1,25 +1,40 @@
-<%= image_tag @church.image_url %><br><br>
-<p>
-  <strong>Resident pastor:</strong>
-  <%= @church.resident_Pastor %>
-</p>
+<div class="row">
+	<div class="col-md-4">
+		<%= image_tag @church.image_url %> 
+		
+		<h3>
+		  <strong><%= @church.name %></strong>
+		</h3>
 
-<p>
-  <strong>Church Name:</strong>
-  <%= @church.name %>
-</p>
+		<p>
+		 
+		  <%= @church.resident_Pastor %>
+		</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @church.address %>
-</p>
+		<p>
+		 
+		  <%= @church.address %>
+		</p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @church.phone %>
-</p>
+		<p>
+		
+		  <%= @church.phone %>
+		</p>
 
-<%= link_to "Write a Review", new_church_review_path(@church), class: "btn btn-primary" %>
+		<%= link_to "Write a Review", new_church_review_path(@church), class: "btn btn-primary" %>
+	</div>
+	<div class="col-md-8">
+		<% if @reviews.blank? %>
+			<h3>No reviews yet. Be the first to write one!</h3>
+		<% else %>
+			<% @reviews.each do |review| %>
+		    <p><%= review.rating %></p>
+		    <p><%= review.comment %></p>
+		<% end %>
+		<% end %>
+	</div>
+</div>
 
 <%= link_to 'Edit', edit_church_path(@church), class: "btn btn-link" %> |
 <%= link_to 'Back', churches_path, class: "btn btn-link" %>
+ 
