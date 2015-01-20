@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :reviews, except: [:show, :index]
-
   devise_for :users
-  resources :churches
+  resources :churches do
+    resources :reviews, except: [:show, :index]
+  end  
 
   get 'pages/about'
 
