@@ -19,7 +19,7 @@
   <%= @church.phone %>
 </p>
 
-
+<%= link_to "Write a Review", new_church_review_path(@church), class: "btn btn-primary" %>
 
 <%= link_to 'Edit', edit_church_path(@church), class: "btn btn-link" %> |
 <%= link_to 'Back', churches_path, class: "btn btn-link" %>

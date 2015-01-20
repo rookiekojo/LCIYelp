@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
 
    flash[:notice] = "Review was successfully created." 
     if @review.save
-      respond_with(@review, :location => root_path)
+      respond_with(@review, :location => @church)
     end
   end
 
