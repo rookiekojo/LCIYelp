@@ -1,10 +1,12 @@
 class ChurchesController < ApplicationController
   before_action :set_church, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :check_user, except: [:index, :show]
 
   # GET /churches
   # GET /churches.json
   def index
-    @church = Church.all
+    @church = Church.all 
   end
 
   # GET /churches/1
@@ -71,6 +73,12 @@ class ChurchesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_church
       @church = Church.find(params[:id])
+    end
+
+     def check_user
+      unless current_user.admin?
+        redirect_to church_path(@church), alert: "Sorry, only admins can do that"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
