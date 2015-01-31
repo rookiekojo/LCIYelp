@@ -35,11 +35,13 @@
 
 	</div>
 	<div class="col-md-9">
+		
 		<% if @reviews.blank? %>
 			<h3>No reviews yet. Be the first to write one!</h3>
 		<% else %>
 
 		<table class="table">
+
 			<thead>
 				<tr>
 					<th class="col-md-2"></th>
@@ -68,6 +70,7 @@
 					</td>
 				</tr>
 				<% end %>	
+
 			</tbody>
 		</table>
 	  <% end %>

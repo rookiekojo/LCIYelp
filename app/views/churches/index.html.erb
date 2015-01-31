@@ -1,42 +1,82 @@
-<div id="jumb2" class="jumbotron"> 
-  <br><br><br><br>
-<br><br><br>
+
+<div id="jumb2">
+<div class="pic">
+<img src="https://s3.amazonaws.com/lci-demo/LCI-banner3.gif">
+</div>
+<div class="pic">
+<img src="https://s3.amazonaws.com/lci-demo/LCI_Banner1.jpg">
+</div>
+<div class="pic">
+<img src="https://s3.amazonaws.com/lci-demo/LCI_banner2.jpg">
+</div>
 </div>
 
-<table class="table table-hover table-condensed">
-  <thead>
-    <tr>
-      <th>Church Name</th>
-      <th>Address</th>
-      <th>Phone</th>
+<div class="row">
+      <div id="Rev" class="col-md-0">
     
-   <% if user_signed_in? && current_user.admin? %>
-      <th colspan="2"></th>
-    <% end %>
+    </div> 
 
-    </tr>
-  </thead>
+  <div class="col-md-12">
+      <table class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Church Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+          
+         <% if user_signed_in? && current_user.admin? %>
+            <th colspan="2"></th>
+          <% end %>
 
-  <tbody>
-    <% @church.each do |church| %>
-      <tr>
-        <td><%= link_to church.name, church %></td>
-        <td><%= church.address %></td>
-        <td><%= church.phone %></td>
-        
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @church.each do |church| %>
+            <tr>
+              <td><%= link_to church.name, church %></td>
+              <td><%= church.address %></td>
+              <td><%= church.phone %></td>
+              
+
+            <% if user_signed_in? && current_user.admin? %>
+              <td><%= link_to 'Edit', edit_church_path(church), class: "btn btn-link" %></td> 
+              <td><%= link_to 'Destroy', church, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+            <% end %>
+
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @church %>
+      <br>
 
       <% if user_signed_in? && current_user.admin? %>
-        <td><%= link_to 'Edit', edit_church_path(church), class: "btn btn-link" %></td> 
-        <td><%= link_to 'Destroy', church, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+        <%= link_to 'New Church', new_church_path, class: "btn btn-link" %><br>
       <% end %>
+  </div>
+</div>
+<script>
 
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+ $(document).ready(function() {
+ 
+  $("#jumb2").owlCarousel({
+ 
+      autoPlay: 8000,
+      navigation : false, // Show next and prev buttons
+      slideSpeed : 300,
+      paginationSpeed : 1000,
+      singleItem:true
+ 
+      // "singleItem:true" is a shortcut for:
+      // items : 1, 
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+ 
+  });
+ 
+});
 
-<br>
-
-<% if user_signed_in? && current_user.admin? %>
-  <%= link_to 'New Church', new_church_path, class: "btn btn-link" %><br>
-<% end %>
+</script>

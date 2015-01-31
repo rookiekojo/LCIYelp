@@ -6,7 +6,7 @@ class ChurchesController < ApplicationController
   # GET /churches
   # GET /churches.json
   def index
-    @church = Church.all 
+    @church = Church.all.order("created_at ASC").paginate(:page => params[:page], :per_page => 10) 
   end
 
   # GET /churches/1

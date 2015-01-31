@@ -1,11 +1,23 @@
-#jumb2 {
-	background-image: url("https://s3.amazonaws.com/lci-demo/LCI-banner3.gif");
-	border: 1px solid #000000;
+
+
+#jumb1 .pic img {
+	display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+ }
+
+#Rev{
+	
 }
 
-#jumb1 {
-	background-image: url("https://s3.amazonaws.com/lci-demo/LCI_Banner1.jpg");
-}
+#jumb2 .pic img {
+	display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+ }
+
 
 .navbar-default {
 	.container-fluid {
