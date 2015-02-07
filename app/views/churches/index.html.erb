@@ -1,4 +1,4 @@
-
+<div id="index_container" class="container">
 <div id="jumb2">
 <div class="pic">
 <img src="https://s3.amazonaws.com/lci-demo/LCI-banner3.gif">
@@ -9,6 +9,7 @@
 <div class="pic">
 <img src="https://s3.amazonaws.com/lci-demo/LCI_banner2.jpg">
 </div>
+
 </div>
 
 <div class="row">
@@ -48,13 +49,15 @@
           <% end %>
         </tbody>
       </table>
-      <%= will_paginate @church %>
+      <br><br>
+      <%= will_paginate @church, renderer: BootstrapPagination::Rails %>
       <br>
 
       <% if user_signed_in? && current_user.admin? %>
         <%= link_to 'New Church', new_church_path, class: "btn btn-link" %><br>
       <% end %>
   </div>
+</div>
 </div>
 <script>
 

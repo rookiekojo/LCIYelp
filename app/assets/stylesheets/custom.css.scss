@@ -1,45 +1,154 @@
+.body {
+	padding: 0px;
+	margin: 0px;
 
+}
 
-#jumb1 .pic img {
+#jumb1 {
+	background-image: url("https://s3.amazonaws.com/lci-demo/LIC_USA-banne.jpg");
+	display: block;
+	width: 100%;
+    height: auto;
+    border: 0px solid #000000;
+    position: relative;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: none;
+	margin-top: -21px;
+}
+
+#jumb1 .pic {
+	
 	display: block;
     width: 100%;
     height: auto;
-    border: 1px solid #000000;
+    border: 0px solid #000000;
+    position: relative;
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	margin-top: -1px;
+
  }
 
-#Rev{
-	
+#jumb2 {
+	margin-top: -21px;
 }
+
 
 #jumb2 .pic img {
 	display: block;
     width: 100%;
     height: auto;
     border: 1px solid #000000;
+
  }
 
+#transbox{
+	margin: 0px auto;
+	background-color: black;
+	opacity: 0.7;
+	margin-bottom: 80px;
+	width: 60%;
+	height: auto;
+	border-radius: 10px;
+ 	color: white;
+ 	
+    
+}
+
+.transbox_content {
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	font-size:30px;
+	margin: 0px;
+}
+
+.transbox_content2 {
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	font-size:35px;
+	font-family: 'Brush Script MT', cursive;
+	margin-top: -10px;
+}
 
 .navbar-default {
 	.container-fluid {
 		background-color: #82858c;
+
 	.navbar-nav > li > a {
 		color: #000000;
 		font-size: 16px;
 		font-weight: bold;
+
 	  }
 	  .navbar-brand {
 	    color: black;
 	    font-size: 30px;
 	    font-weight: bold;
 	    font-family: 'Hobo std';
+
 	  }
 	}
 }
-.container-fluid {
-	padding: 0px 120px;
-}
-.about{
-	
-	padding: 0px 120px;
+#show_container {
+	padding: 10px;	
+	margin: 0px;
 }
 
+.container-fluid {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	
+}
+#footer {
+	margin-bottom: 0px;
+	margin-top: 0px;
+	border: 0px;
+	clear: left;
+}
+
+#signup {
+	margin-right: 10px;
+	margin-left: 0px;
+	margin-top: -20px;
+	float: right;
+}
+
+#signup_pic {
+	margin-left: 5px;
+	float: left;
+}
+
+#login {
+	margin-left: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	height: 450px;
+}
+
+#login_pic {
+	background-size: cover;
+	background-repeat: repeat;
+	margin-left: 5px;
+
+	
+}
+
+#login_container {
+	margin: 0px;
+	padding: 0px;
+}
+#index_container {
+	padding: 20px;
+
+}
