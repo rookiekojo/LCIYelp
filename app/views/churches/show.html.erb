@@ -1,5 +1,6 @@
 
-<div class="row">
+<div id="show_row" class="row">
+	
 	<div class="col-xs-4 col-sm-4 col-md-3">
 		<%= image_tag @church.image_url %> 
 		
@@ -35,6 +36,7 @@
 		<% end %>
 
 	</div>
+
 	<div class="col-xs-8 col-sm-8 col-md-9">
 		
 		<% if @reviews.blank? %>
@@ -76,6 +78,7 @@
 		</table>
 	  <% end %>
 	</div>
+
 </div>
 
 

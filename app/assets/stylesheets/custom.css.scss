@@ -1,7 +1,15 @@
 .body {
 	padding: 0px;
 	margin: 0px;
+	height: 100%;
 
+}
+
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -4em;
 }
 
 #jumb1 {
@@ -92,6 +100,7 @@
 
 	  }
 	  .navbar-brand {
+
 	    color: black;
 	    font-size: 30px;
 	    font-weight: bold;
@@ -111,6 +120,11 @@
 	margin-bottom: 0px;
 	margin-top: 0px;
 	border: 0px;
+	
+}
+
+.footer, .push {
+	height: 4em;
 }
 
 #signup {
@@ -134,4 +148,8 @@
 #index_container {
 	padding: 20px;
 
+}
+
+#show_row {
+	padding: 5px;
 }
