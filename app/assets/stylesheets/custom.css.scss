@@ -23,7 +23,10 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: none;
-	margin-top: -21px;
+	margin-top: -23px;
+	margin-bottom: -7px;
+	z-index: -1;
+	
 }
 
 #jumb1 .pic {
@@ -121,24 +124,14 @@
 	margin-bottom: 0px;
 	margin-top: 0px;
 	border: 0px;
-	
 }
 
-.footer, .push {
-	height: 4em;
+.signup {
+	padding: 30px;
 }
 
-#signup {
-	margin-right: 0px;
-	margin-left: 0px;
-	margin-top: 0px;
-}
-
-#login {
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	padding: 10px;
+.login {
+	padding: 30px;
 }
 
 
@@ -152,6 +145,6 @@
 }
 
 #show_row {
-	padding: 5px;
+	padding: 0px;
 	margin: 0px;
 }
