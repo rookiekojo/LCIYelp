@@ -1,5 +1,8 @@
 class Church < ActiveRecord::Base
 	mount_uploader :image, ImageUploader
+
+	searchkick
+
 	has_many :reviews
 
 	validates :name, :address, :phone, :resident_Pastor, :image, presence: true

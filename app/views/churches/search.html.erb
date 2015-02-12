@@ -1,0 +1,46 @@
+<div id="index_container" class="container">
+
+
+
+</div>
+
+<div class="row">
+      <div id="Rev" class="col-md-0">
+    
+    </div> 
+
+  <div class="col-md-12">
+      <table class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th>Church Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+          
+         <% if user_signed_in? && current_user.admin? %>
+            <th colspan="2"></th>
+          <% end %>
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @church.each do |church| %>
+            <tr>
+              <td><%= link_to church.name, church %></td>
+              <td><%= church.address %></td>
+              <td><%= church.phone %></td>
+              
+
+            <% if user_signed_in? && current_user.admin? %>
+              <td><%= link_to 'Edit', edit_church_path(church), class: "btn btn-link" %></td> 
+              <td><%= link_to 'Destroy', church, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
+            <% end %>
+
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+
+     
